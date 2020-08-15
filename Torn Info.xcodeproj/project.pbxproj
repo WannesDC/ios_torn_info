@@ -15,6 +15,9 @@
 		DAA0D11624E809D700C2BC76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D11424E809D700C2BC76 /* LaunchScreen.storyboard */; };
 		DAA0D12124E809D700C2BC76 /* Torn_InfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D12024E809D700C2BC76 /* Torn_InfoTests.swift */; };
 		DAA0D12C24E809D700C2BC76 /* Torn_InfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D12B24E809D700C2BC76 /* Torn_InfoUITests.swift */; };
+		DAA0D13A24E83B4C00C2BC76 /* Controllers in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D13924E83B4C00C2BC76 /* Controllers */; };
+		DAA0D13C24E83B6D00C2BC76 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D13B24E83B6C00C2BC76 /* Models */; };
+		DAA0D13E24E83B7900C2BC76 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D13D24E83B7900C2BC76 /* Views */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		DAA0D12724E809D700C2BC76 /* Torn InfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Torn InfoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA0D12B24E809D700C2BC76 /* Torn_InfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torn_InfoUITests.swift; sourceTree = "<group>"; };
 		DAA0D12D24E809D700C2BC76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA0D13924E83B4C00C2BC76 /* Controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controllers; sourceTree = "<group>"; };
+		DAA0D13B24E83B6C00C2BC76 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		DAA0D13D24E83B7900C2BC76 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 		DAA0D10824E809D500C2BC76 /* Torn Info */ = {
 			isa = PBXGroup;
 			children = (
+				DAA0D13D24E83B7900C2BC76 /* Views */,
+				DAA0D13B24E83B6C00C2BC76 /* Models */,
+				DAA0D13924E83B4C00C2BC76 /* Controllers */,
 				DAA0D10924E809D500C2BC76 /* AppDelegate.swift */,
 				DAA0D10B24E809D500C2BC76 /* SceneDelegate.swift */,
 				DAA0D10D24E809D500C2BC76 /* ViewController.swift */,
@@ -232,8 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA0D13C24E83B6D00C2BC76 /* Models in Resources */,
 				DAA0D11624E809D700C2BC76 /* LaunchScreen.storyboard in Resources */,
 				DAA0D11324E809D700C2BC76 /* Assets.xcassets in Resources */,
+				DAA0D13E24E83B7900C2BC76 /* Views in Resources */,
+				DAA0D13A24E83B4C00C2BC76 /* Controllers in Resources */,
 				DAA0D11124E809D500C2BC76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
