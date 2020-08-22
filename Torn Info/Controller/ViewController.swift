@@ -28,6 +28,12 @@ class ViewController: UIViewController {
             return
         }
         
+        let endpoint = "user/?selections=basic&key=" + temp_api_key
+        
+        let getRequest = APIRequest(endpoint: endpoint)
+        
+        getRequest.call()
+        
         let storyboard = UIStoryboard(name: "LoggedIn", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "loggedInView") as UIViewController
         

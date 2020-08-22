@@ -10,11 +10,6 @@ import Foundation
 
 struct APIRequest {
     
-    enum APIError:Error{
-        case responseProblem
-        case otherProblem
-    }
-    
     let resourceURL: URL
     
     init(endpoint: String) {
@@ -25,5 +20,19 @@ struct APIRequest {
         self.resourceURL = resourceURL
     }
  
-    
+    func call() {
+        let session = URLSession.shared
+            session.dataTask(with: resourceURL) { (data, response, error) in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                    print(error)
+                    return
+                    }
+                do {
+                    let json =  try JSONSerialization.jsonObject(with: jsonData, options: [])
+                    print(json)
+                } catch {
+                    print(error)
+                }
+            }.resume()
+    }
 }
