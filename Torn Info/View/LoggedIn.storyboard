@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="zby-dr-hsr">
+            <objects>
+                <viewController id="UZp-cs-37p" customClass="LoggedInViewController" customModule="Torn_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="umc-TR-YgO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Bp3-z3-XRt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" landscapeImage="house" selectedImage="house" id="dxB-r2-1uB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNz-GP-dbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="389"/>
+        </scene>
+        <!--Armoury-->
+        <scene sceneID="VU7-Ss-Z2U">
+            <objects>
+                <viewController id="Xz2-oE-yKU" customClass="ArmouryViewController" customModule="Torn_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jlx-Hv-TTa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="w5Q-kb-IXZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Armoury" image="hammer" catalog="system" landscapeImage="hammer" selectedImage="hammer" id="NjN-tn-r7g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHs-UF-mrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="840"/>
+        </scene>
+        <!--Raids-->
+        <scene sceneID="76v-ZT-kF0">
+            <objects>
+                <viewController id="vFa-ph-JgE" customClass="RaidsViewController" customModule="Torn_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PaL-b5-U3F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dQC-e8-fn1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Raids" image="bolt" catalog="system" landscapeImage="bolt" selectedImage="bolt" id="t2z-Rf-ZEB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1O1-Zx-sAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="-319"/>
+        </scene>
+        <!--Crimes-->
+        <scene sceneID="Ra9-Lq-Hi8">
+            <objects>
+                <viewController id="lFG-Xa-qgh" customClass="CrimesViewController" customModule="Torn_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OIu-JX-VW3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LIK-Hb-zv7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Crimes" image="briefcase" catalog="system" landscapeImage="briefcase" id="XNF-mt-mF4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9O-zy-KSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-935" y="840"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ynv-g5-XWi">
+            <objects>
+                <tabBarController storyboardIdentifier="loggedInView" automaticallyAdjustsScrollViewInsets="NO" id="0wp-RY-uqn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sI6-mo-WU0">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UZp-cs-37p" kind="relationship" relationship="viewControllers" id="sFp-2X-UWy"/>
+                        <segue destination="Xz2-oE-yKU" kind="relationship" relationship="viewControllers" id="hGF-Og-jpw"/>
+                        <segue destination="lFG-Xa-qgh" kind="relationship" relationship="viewControllers" id="Tw3-op-s20"/>
+                        <segue destination="vFa-ph-JgE" kind="relationship" relationship="viewControllers" id="iBq-6X-uMF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hd3-3p-K8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386.95652173913044" y="55.580357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bolt" catalog="system" width="101" height="128"/>
+        <image name="briefcase" catalog="system" width="128" height="102"/>
+        <image name="hammer" catalog="system" width="128" height="115"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+    </resources>
+</document>
