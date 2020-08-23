@@ -12,10 +12,21 @@ class LoggedInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getProfile()
         // Do any additional setup after loading the view.
     }
     
+    
+    func getProfile() -> Void {
+        let endpoint = "user/?selections=profile,bars,cooldowns,money&key="+globalApiKey
+        
+        let getRequest = APIRequest(endpoint: endpoint)
+        
+        getRequest.callProfile {
+            (profile) in
+            //updateviewwith information
+        }
+    }
 
     /*
     // MARK: - Navigation

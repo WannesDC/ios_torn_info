@@ -17,6 +17,9 @@ class RaidsViewController: UIViewController {
     }
     
 
+    func getRaids() -> Void {
+        
+    }
     /*
     // MARK: - Navigation
 

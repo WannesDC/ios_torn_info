@@ -12,11 +12,21 @@ class ArmouryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getArmouryNews()
         // Do any additional setup after loading the view.
     }
     
 
+    func getArmouryNews() -> Void {
+        let endpoint = "faction/?selections=armorynewsfull&key="+globalApiKey
+        
+        let getRequest = APIRequest(endpoint: endpoint)
+        getRequest.callArmoryNews{
+            (armoryNews) in
+            print(armoryNews)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -9,7 +9,7 @@
 import Foundation
 
 final class Profile: Codable {
-    
+
     var rank: String
     var level: Int
     var gender: String
@@ -26,13 +26,13 @@ final class Profile: Codable {
     var playerID: Int
     var name: String
     var propertyID: Int
-    var serverTime: Int64
+    var serverTime: Int
     var points: Int
-    var caymanBank: Int64
-    var vaultAmount: Int64
-    var networth: Int64
-    var moneyOnHand: Int64
-    var life: Life
+    var caymanBank: Int
+    var vaultAmount: Int
+    var networth: Int
+    var moneyOnHand: Int
+    var life: Bars
     var status: TornStatus
     var job: Job
     var faction: Faction
@@ -46,7 +46,7 @@ final class Profile: Codable {
     var chain: Chain
     var cooldowns: Cooldowns
     var cityBank: CityBank
-    
+
     enum CodingKeys : String, CodingKey {
         case rank
         case level
@@ -56,7 +56,7 @@ final class Profile: Codable {
         case awards
         case friends
         case enemies
-        case forumPosts
+        case forumPosts = "forum_posts"
         case karma
         case age
         case role
@@ -85,8 +85,8 @@ final class Profile: Codable {
         case cooldowns
         case cityBank = "city_bank"
     }
-    
-    init(rank: String, level: Int, gender: String, property: String, signup: String, awards: Int, friends: Int, enemies: Int, forumPosts: Int, karma: Int, age: Int, role: String, donator: Int, playerID: Int, name: String, propertyID: Int, serverTime: Int64, points: Int, caymanBank: Int64, vaultAmount: Int64, networth: Int64, moneyOnHand: Int64, life: Life, status: TornStatus, job: Job, faction: Faction, married: Married, basicIcons: [String : String], states: States, lastAction: LastAction, happy: Bars, energy: Bars, nerve: Bars, chain: Chain, cooldowns: Cooldowns, cityBank: CityBank) {
+
+    init(rank: String, level: Int, gender: String, property: String, signup: String, awards: Int, friends: Int, enemies: Int, forumPosts: Int, karma: Int, age: Int, role: String, donator: Int, playerID: Int, name: String, propertyID: Int, serverTime: Int, points: Int, caymanBank: Int, vaultAmount: Int, networth: Int, moneyOnHand: Int, life: Bars, status: TornStatus, job: Job, faction: Faction, married: Married, basicIcons: [String : String], states: States, lastAction: LastAction, happy: Bars, energy: Bars, nerve: Bars, chain: Chain, cooldowns: Cooldowns, cityBank: CityBank) {
         self.rank = rank
         self.level = level
         self.gender = gender

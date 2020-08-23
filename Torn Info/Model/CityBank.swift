@@ -9,18 +9,17 @@
 import Foundation
 
 final class CityBank : Codable {
-
     
     var amount: Int64
-    var timeLife: Int64
+    var timeLeft: Int
     
     enum CodingKeys: String, CodingKey {
         case amount
-        case TimeLife = "time_life"
+        case timeLeft = "time_left"
     }
     
-    init(amount: Int64, timeLife: Int64) {
+    init(amount: Int64, timeLeft: Int) {
         self.amount = amount
-        self.timeLife = timeLife
+        self.timeLeft = timeLeft
     }
 }

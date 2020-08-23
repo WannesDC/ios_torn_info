@@ -12,10 +12,19 @@ class CrimesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getCrimes()
         // Do any additional setup after loading the view.
     }
     
+    func getCrimes() -> Void {
+        let endpoint = "faction/?selections=crimes&key="+globalApiKey
+        
+        let getRequest = APIRequest(endpoint: endpoint)
+        getRequest.callCrimes{
+            (crimes) in
+            print(crimes)
+        }
+    }
 
     /*
     // MARK: - Navigation

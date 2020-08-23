@@ -12,10 +12,10 @@ final class LastAction : Codable {
 
     
     var status: String
-    var timestamp: Int64
+    var timestamp: Int
     var relative: String
     
-    init(status: String, timestamp: Int64, relative: String) {
+    init(status: String, timestamp: Int, relative: String) {
         self.status = status
         self.timestamp = timestamp
         self.relative = relative

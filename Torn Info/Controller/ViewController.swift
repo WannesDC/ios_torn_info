@@ -28,23 +28,38 @@ class ViewController: UIViewController {
             return
         }
         
-        login(apiKey: apiKey.text ?? "")
+        //globalApiKey = apiKey.text ?? ""
+        globalApiKey = temp_api_key
         
-        //print(apiKey.text)
+        login(apiKey: apiKey.text ?? "")
     }
     
     func login(apiKey : String) -> Void {
-        let endpoint = "user/?selections=basic&key=" + temp_api_key
+        let endpoint = "user/?selections=basic&key=" + globalApiKey
         
         let getRequest = APIRequest(endpoint: endpoint)
         
-        let basicInfo = getRequest.callLogin()
-        
-        print(basicInfo?.name)
-        guard basicInfo?.name != nil else {
-            return
+        getRequest.callLogin {
+            (basicInfo) in
+            
+            guard basicInfo != nil else { return }
+            
+            globalUserID = basicInfo?.playerID as! Int
+            
+            DispatchQueue.main.async {
+                self.goToNextPlayground()
+            }
+            
+
         }
         
+    }
+    
+    func goToNextPlayground() -> Void {
+
+        guard globalUserID != -1 else {
+            return
+        }
         let storyboard = UIStoryboard(name: "LoggedIn", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "loggedInView") as UIViewController
         

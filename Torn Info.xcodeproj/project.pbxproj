@@ -24,7 +24,6 @@
 		DAA0D15724F12C6400C2BC76 /* RaidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15624F12C6400C2BC76 /* RaidsViewController.swift */; };
 		DAA0D15924F1379000C2BC76 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15824F1379000C2BC76 /* APIRequest.swift */; };
 		DAA0D15B24F292EF00C2BC76 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15A24F292EF00C2BC76 /* Profile.swift */; };
-		DAA0D15D24F2949B00C2BC76 /* Life.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15C24F2949B00C2BC76 /* Life.swift */; };
 		DAA0D15F24F2956100C2BC76 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15E24F2956100C2BC76 /* Job.swift */; };
 		DAA0D16124F2960900C2BC76 /* Faction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D16024F2960900C2BC76 /* Faction.swift */; };
 		DAA0D16324F2972400C2BC76 /* Married.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D16224F2972400C2BC76 /* Married.swift */; };
@@ -34,6 +33,11 @@
 		DAA0D16D24F29A4100C2BC76 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D16C24F29A4100C2BC76 /* Chain.swift */; };
 		DAA0D16F24F29AA100C2BC76 /* Cooldowns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D16E24F29AA100C2BC76 /* Cooldowns.swift */; };
 		DAA0D17124F29AD900C2BC76 /* CityBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D17024F29AD900C2BC76 /* CityBank.swift */; };
+		DAA0D17724F2A71600C2BC76 /* MyVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D17624F2A71600C2BC76 /* MyVariables.swift */; };
+		DAA0D17B24F2BCB000C2BC76 /* ArmoryNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D17A24F2BCB000C2BC76 /* ArmoryNews.swift */; };
+		DAA0D17D24F2BD1500C2BC76 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D17C24F2BD1500C2BC76 /* News.swift */; };
+		DAA0D17F24F2C01500C2BC76 /* Crimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D17E24F2C01500C2BC76 /* Crimes.swift */; };
+		DAA0D18124F2C05700C2BC76 /* Crime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D18024F2C05700C2BC76 /* Crime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +81,6 @@
 		DAA0D15624F12C6400C2BC76 /* RaidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidsViewController.swift; sourceTree = "<group>"; };
 		DAA0D15824F1379000C2BC76 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		DAA0D15A24F292EF00C2BC76 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		DAA0D15C24F2949B00C2BC76 /* Life.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life.swift; sourceTree = "<group>"; };
 		DAA0D15E24F2956100C2BC76 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		DAA0D16024F2960900C2BC76 /* Faction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faction.swift; sourceTree = "<group>"; };
 		DAA0D16224F2972400C2BC76 /* Married.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Married.swift; sourceTree = "<group>"; };
@@ -87,6 +90,11 @@
 		DAA0D16C24F29A4100C2BC76 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		DAA0D16E24F29AA100C2BC76 /* Cooldowns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cooldowns.swift; sourceTree = "<group>"; };
 		DAA0D17024F29AD900C2BC76 /* CityBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBank.swift; sourceTree = "<group>"; };
+		DAA0D17624F2A71600C2BC76 /* MyVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVariables.swift; sourceTree = "<group>"; };
+		DAA0D17A24F2BCB000C2BC76 /* ArmoryNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmoryNews.swift; sourceTree = "<group>"; };
+		DAA0D17C24F2BD1500C2BC76 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		DAA0D17E24F2C01500C2BC76 /* Crimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crimes.swift; sourceTree = "<group>"; };
+		DAA0D18024F2C05700C2BC76 /* Crime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,7 @@
 				DAA0D11224E809D700C2BC76 /* Assets.xcassets */,
 				DAA0D11424E809D700C2BC76 /* LaunchScreen.storyboard */,
 				DAA0D11724E809D700C2BC76 /* Info.plist */,
+				DAA0D17624F2A71600C2BC76 /* MyVariables.swift */,
 			);
 			path = "Torn Info";
 			sourceTree = "<group>";
@@ -175,7 +184,6 @@
 				DAA0D14A24ED61F500C2BC76 /* Basic.swift */,
 				DAA0D14C24ED624200C2BC76 /* Status.swift */,
 				DAA0D15A24F292EF00C2BC76 /* Profile.swift */,
-				DAA0D15C24F2949B00C2BC76 /* Life.swift */,
 				DAA0D15E24F2956100C2BC76 /* Job.swift */,
 				DAA0D16024F2960900C2BC76 /* Faction.swift */,
 				DAA0D16224F2972400C2BC76 /* Married.swift */,
@@ -185,6 +193,10 @@
 				DAA0D16C24F29A4100C2BC76 /* Chain.swift */,
 				DAA0D16E24F29AA100C2BC76 /* Cooldowns.swift */,
 				DAA0D17024F29AD900C2BC76 /* CityBank.swift */,
+				DAA0D17A24F2BCB000C2BC76 /* ArmoryNews.swift */,
+				DAA0D17C24F2BD1500C2BC76 /* News.swift */,
+				DAA0D17E24F2C01500C2BC76 /* Crimes.swift */,
+				DAA0D18024F2C05700C2BC76 /* Crime.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,13 +361,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA0D18124F2C05700C2BC76 /* Crime.swift in Sources */,
 				DAA0D14B24ED61F500C2BC76 /* Basic.swift in Sources */,
+				DAA0D17D24F2BD1500C2BC76 /* News.swift in Sources */,
 				DAA0D14D24ED624200C2BC76 /* Status.swift in Sources */,
+				DAA0D17B24F2BCB000C2BC76 /* ArmoryNews.swift in Sources */,
 				DAA0D15324F12C4800C2BC76 /* ArmouryViewController.swift in Sources */,
 				DAA0D10E24E809D500C2BC76 /* ViewController.swift in Sources */,
 				DAA0D15F24F2956100C2BC76 /* Job.swift in Sources */,
+				DAA0D17724F2A71600C2BC76 /* MyVariables.swift in Sources */,
 				DAA0D16924F299BA00C2BC76 /* LastAction.swift in Sources */,
 				DAA0D16D24F29A4100C2BC76 /* Chain.swift in Sources */,
+				DAA0D17F24F2C01500C2BC76 /* Crimes.swift in Sources */,
 				DAA0D15124F1151200C2BC76 /* LoggedInViewController.swift in Sources */,
 				DAA0D16124F2960900C2BC76 /* Faction.swift in Sources */,
 				DAA0D10A24E809D500C2BC76 /* AppDelegate.swift in Sources */,
@@ -365,7 +382,6 @@
 				DAA0D17124F29AD900C2BC76 /* CityBank.swift in Sources */,
 				DAA0D15B24F292EF00C2BC76 /* Profile.swift in Sources */,
 				DAA0D16724F298EB00C2BC76 /* States.swift in Sources */,
-				DAA0D15D24F2949B00C2BC76 /* Life.swift in Sources */,
 				DAA0D16324F2972400C2BC76 /* Married.swift in Sources */,
 				DAA0D16B24F299F800C2BC76 /* Bars.swift in Sources */,
 				DAA0D15924F1379000C2BC76 /* APIRequest.swift in Sources */,
