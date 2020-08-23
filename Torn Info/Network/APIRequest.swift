@@ -12,6 +12,8 @@ struct APIRequest {
     
     let resourceURL: URL
     
+    
+    
     init(endpoint: String) {
         let resourceString = "https://api.torn.com/\(endpoint)"
         
@@ -20,19 +22,22 @@ struct APIRequest {
         self.resourceURL = resourceURL
     }
  
-    func call() {
+    func callLogin() -> Basic? {
+        var basicInfo: Basic?
+        
         let session = URLSession.shared
             session.dataTask(with: resourceURL) { (data, response, error) in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
-                    print(error)
+                    print(error ?? "")
                     return
                     }
-                do {
-                    let json =  try JSONSerialization.jsonObject(with: jsonData, options: [])
-                    print(json)
-                } catch {
-                    print(error)
-                }
+                
+                let jsonDecoder = JSONDecoder()
+                
+                basicInfo = try? jsonDecoder.decode(Basic.self, from: jsonData)
+                
             }.resume()
+        
+        return basicInfo
     }
 }

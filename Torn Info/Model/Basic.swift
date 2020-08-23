@@ -11,14 +11,23 @@ import Foundation
 final class Basic : Codable {
     var level: Int
     var gender: String
-    var player_id: Int
+    var playerID: Int
     var name: String
     var status: TornStatus
     
-    init(level: Int, gender: String, player_id: Int, name: String, status: TornStatus) {
+    
+    enum CodingKeys: String, CodingKey {
+        case level
+        case gender
+        case playerID = "player_id"
+        case name
+        case status
+    }
+    
+    init(level: Int, gender: String, playerID: Int, name: String, status: TornStatus) {
         self.level = level
         self.gender = gender
-        self.player_id = player_id
+        self.playerID = playerID
         self.name = name
         self.status = status
     }

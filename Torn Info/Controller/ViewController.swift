@@ -28,22 +28,27 @@ class ViewController: UIViewController {
             return
         }
         
+        login(apiKey: apiKey.text ?? "")
+        
+        //print(apiKey.text)
+    }
+    
+    func login(apiKey : String) -> Void {
         let endpoint = "user/?selections=basic&key=" + temp_api_key
         
         let getRequest = APIRequest(endpoint: endpoint)
         
-        getRequest.call()
+        let basicInfo = getRequest.callLogin()
+        
+        print(basicInfo?.name)
+        guard basicInfo?.name != nil else {
+            return
+        }
         
         let storyboard = UIStoryboard(name: "LoggedIn", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "loggedInView") as UIViewController
         
         present(vc, animated: true, completion: nil)
-        
-        print(apiKey.text)
-    }
-    
-    func login(ApiKey : String) -> Void {
-        
     }
 }
 
