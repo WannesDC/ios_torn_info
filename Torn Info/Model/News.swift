@@ -17,4 +17,27 @@ final class News: Codable {
     var timestamp: Int
     var news: String
     
+    func convertTimeStamp() -> String {
+        guard timestamp != 0 else {
+            return "N/A"
+        }
+        
+        let date = NSDate(timeIntervalSince1970: TimeInterval(timestamp))
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.medium
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        let formattedDate = dateFormatter.string(from: date as Date)
+        print(formattedDate)
+        return formattedDate
+    }
+    
+    func stripHtmlFromNews() -> String {
+        guard news != "" else {
+            return "N/A"
+        }
+        
+        let convertedString = news.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        return convertedString
+
+    }
 }

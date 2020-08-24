@@ -11,9 +11,9 @@ import Foundation
 final class Crimes : Codable {
     
     
-    var crimes: [String: Crime]
+    var crimes: [String: Crime?]
     
-    init(crimes: [String : Crime]) {
+    init(crimes: [String : Crime?]) {
         self.crimes = crimes
     }
     

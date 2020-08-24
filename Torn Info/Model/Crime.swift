@@ -9,21 +9,38 @@
 import Foundation
 
 final class Crime : Codable {
-   
+    init(crimeID: Int? = nil, crimeName: String? = nil, participants: [[String : TornStatus?]?]? = nil, timeStarted: Int64? = nil, timeReady: Int64? = nil, timeLeft: Int? = nil, timeCompleted: Int64? = nil, initiated: Bool? = nil, initiatedBy: Int? = nil, plannedBy: Int? = nil, success: Bool? = nil, moneyGain: Int? = nil, respectGain: Int? = nil) {
+        self.crimeID = crimeID
+        self.crimeName = crimeName
+        self.participants = participants
+        self.timeStarted = timeStarted
+        self.timeReady = timeReady
+        self.timeLeft = timeLeft
+        self.timeCompleted = timeCompleted
+        self.initiated = initiated
+        self.initiatedBy = initiatedBy
+        self.plannedBy = plannedBy
+        self.success = success
+        self.moneyGain = moneyGain
+        self.respectGain = respectGain
+    }
     
-    var crimeID: Int
-    var crimeName: String
-    var participants: [String: TornStatus?]?
-    var timeStarted: Int
-    var timeReady: Int
-    var timeLeft: Int
-    var timeCompleted: Int
-    var initiated: Int
-    var initiatedBy: Int
-    var plannedBy: Int
-    var success: Int
-    var moneyGain: Int
-    var respectGain: Int
+    
+ 
+    
+    var crimeID: Int?
+    var crimeName: String?
+    var participants: [[String: TornStatus?]?]?
+    var timeStarted: Int64?
+    var timeReady: Int64?
+    var timeLeft: Int?
+    var timeCompleted: Int64?
+    var initiated: Bool?
+    var initiatedBy: Int?
+    var plannedBy: Int?
+    var success: Bool?
+    var moneyGain: Int?
+    var respectGain: Int?
     
     enum CodingKeys: String, CodingKey {
         case crimeID = "crime_id"
@@ -41,20 +58,5 @@ final class Crime : Codable {
         case respectGain = "respect_gain"
     }
     
-    init(crimeID: Int, crimeName: String, participants: [String : TornStatus?], timeStarted: Int, timeReady: Int, timeLeft: Int, timeCompleted: Int, initiated: Int, initiatedBy: Int, plannedBy: Int, success: Int, moneyGain: Int, respectGain: Int) {
-           self.crimeID = crimeID
-           self.crimeName = crimeName
-           self.participants = participants
-           self.timeStarted = timeStarted
-           self.timeReady = timeReady
-           self.timeLeft = timeLeft
-           self.timeCompleted = timeCompleted
-           self.initiated = initiated
-           self.initiatedBy = initiatedBy
-           self.plannedBy = plannedBy
-           self.success = success
-           self.moneyGain = moneyGain
-           self.respectGain = respectGain
-       }
     
 }

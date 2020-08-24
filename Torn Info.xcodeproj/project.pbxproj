@@ -19,7 +19,6 @@
 		DAA0D14D24ED624200C2BC76 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D14C24ED624200C2BC76 /* Status.swift */; };
 		DAA0D14F24ED6F9E00C2BC76 /* LoggedIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D14E24ED6F9E00C2BC76 /* LoggedIn.storyboard */; };
 		DAA0D15124F1151200C2BC76 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15024F1151200C2BC76 /* LoggedInViewController.swift */; };
-		DAA0D15324F12C4800C2BC76 /* ArmouryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15224F12C4800C2BC76 /* ArmouryViewController.swift */; };
 		DAA0D15524F12C5300C2BC76 /* CrimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15424F12C5300C2BC76 /* CrimesViewController.swift */; };
 		DAA0D15724F12C6400C2BC76 /* RaidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15624F12C6400C2BC76 /* RaidsViewController.swift */; };
 		DAA0D15924F1379000C2BC76 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D15824F1379000C2BC76 /* APIRequest.swift */; };
@@ -38,6 +37,7 @@
 		DAA0D17D24F2BD1500C2BC76 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D17C24F2BD1500C2BC76 /* News.swift */; };
 		DAA0D17F24F2C01500C2BC76 /* Crimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D17E24F2C01500C2BC76 /* Crimes.swift */; };
 		DAA0D18124F2C05700C2BC76 /* Crime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D18024F2C05700C2BC76 /* Crime.swift */; };
+		DAA0D18524F3D2FA00C2BC76 /* ArmouryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D18424F3D2FA00C2BC76 /* ArmouryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,6 @@
 		DAA0D14C24ED624200C2BC76 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		DAA0D14E24ED6F9E00C2BC76 /* LoggedIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedIn.storyboard; sourceTree = "<group>"; };
 		DAA0D15024F1151200C2BC76 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
-		DAA0D15224F12C4800C2BC76 /* ArmouryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmouryViewController.swift; sourceTree = "<group>"; };
 		DAA0D15424F12C5300C2BC76 /* CrimesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimesViewController.swift; sourceTree = "<group>"; };
 		DAA0D15624F12C6400C2BC76 /* RaidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidsViewController.swift; sourceTree = "<group>"; };
 		DAA0D15824F1379000C2BC76 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		DAA0D17C24F2BD1500C2BC76 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		DAA0D17E24F2C01500C2BC76 /* Crimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crimes.swift; sourceTree = "<group>"; };
 		DAA0D18024F2C05700C2BC76 /* Crime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime.swift; sourceTree = "<group>"; };
+		DAA0D18424F3D2FA00C2BC76 /* ArmouryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmouryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,10 +213,10 @@
 			isa = PBXGroup;
 			children = (
 				DAA0D15024F1151200C2BC76 /* LoggedInViewController.swift */,
-				DAA0D15224F12C4800C2BC76 /* ArmouryViewController.swift */,
 				DAA0D15424F12C5300C2BC76 /* CrimesViewController.swift */,
 				DAA0D15624F12C6400C2BC76 /* RaidsViewController.swift */,
 				DAA0D10D24E809D500C2BC76 /* ViewController.swift */,
+				DAA0D18424F3D2FA00C2BC76 /* ArmouryTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,8 +366,8 @@
 				DAA0D17D24F2BD1500C2BC76 /* News.swift in Sources */,
 				DAA0D14D24ED624200C2BC76 /* Status.swift in Sources */,
 				DAA0D17B24F2BCB000C2BC76 /* ArmoryNews.swift in Sources */,
-				DAA0D15324F12C4800C2BC76 /* ArmouryViewController.swift in Sources */,
 				DAA0D10E24E809D500C2BC76 /* ViewController.swift in Sources */,
+				DAA0D18524F3D2FA00C2BC76 /* ArmouryTableViewController.swift in Sources */,
 				DAA0D15F24F2956100C2BC76 /* Job.swift in Sources */,
 				DAA0D17724F2A71600C2BC76 /* MyVariables.swift in Sources */,
 				DAA0D16924F299BA00C2BC76 /* LastAction.swift in Sources */,
