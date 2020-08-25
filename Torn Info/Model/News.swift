@@ -27,7 +27,7 @@ final class News: Codable {
         dateFormatter.timeStyle = DateFormatter.Style.medium
         dateFormatter.dateStyle = DateFormatter.Style.medium
         let formattedDate = dateFormatter.string(from: date as Date)
-        print(formattedDate)
+        
         return formattedDate
     }
     

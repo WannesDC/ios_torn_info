@@ -7,6 +7,71 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Raids-->
+        <scene sceneID="0bx-lP-JwQ">
+            <objects>
+                <tableViewController id="6R8-O9-NOm" customClass="RaidsTableViewController" customModule="Torn_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZxI-Xd-pcj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="raidCell" id="NIP-f9-RlY" customClass="RaidsTableViewCell" customModule="Torn_Info" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="109"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NIP-f9-RlY" id="0OY-ON-B5d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fys-Zv-YdT">
+                                            <rect key="frame" x="16" y="16" width="382" height="77"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-D2-N8q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvD-Rr-Pkh">
+                                                    <rect key="frame" x="0.0" y="30.5" width="382" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVj-Il-vDA">
+                                                    <rect key="frame" x="0.0" y="58.5" width="382" height="18.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fys-Zv-YdT" firstAttribute="leading" secondItem="0OY-ON-B5d" secondAttribute="leading" constant="16" id="8nx-fA-gC5"/>
+                                        <constraint firstItem="fys-Zv-YdT" firstAttribute="top" secondItem="0OY-ON-B5d" secondAttribute="top" constant="16" id="Xdt-1T-HyO"/>
+                                        <constraint firstAttribute="trailing" secondItem="fys-Zv-YdT" secondAttribute="trailing" constant="16" id="lFE-Sr-N30"/>
+                                        <constraint firstAttribute="bottom" secondItem="fys-Zv-YdT" secondAttribute="bottom" constant="16" id="vvC-Aq-hqz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="assaultLabel" destination="dvD-Rr-Pkh" id="3VC-R6-iXY"/>
+                                    <outlet property="defenceLabel" destination="eVj-Il-vDA" id="bXG-MD-8dd"/>
+                                    <outlet property="timeLabel" destination="CUJ-D2-N8q" id="QKn-a8-kJy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6R8-O9-NOm" id="CSr-0Y-k3M"/>
+                            <outlet property="delegate" destination="6R8-O9-NOm" id="mSX-wB-eWU"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Raids" image="bolt" catalog="system" landscapeImage="bolt" selectedImage="bolt" id="V0Y-iX-gw4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DfD-69-qdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="-333"/>
+        </scene>
         <!--Home-->
         <scene sceneID="zby-dr-hsr">
             <objects>
@@ -181,22 +246,6 @@
             </objects>
             <point key="canvasLocation" x="971.01449275362324" y="388.39285714285711"/>
         </scene>
-        <!--Raids-->
-        <scene sceneID="76v-ZT-kF0">
-            <objects>
-                <viewController id="vFa-ph-JgE" customClass="RaidsViewController" customModule="Torn_Info" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PaL-b5-U3F">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="dQC-e8-fn1"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Raids" image="bolt" catalog="system" landscapeImage="bolt" selectedImage="bolt" id="t2z-Rf-ZEB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1O1-Zx-sAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="971" y="-319"/>
-        </scene>
         <!--Crimes-->
         <scene sceneID="Ra9-Lq-Hi8">
             <objects>
@@ -233,14 +282,14 @@
                                             <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lYp-ya-P2O">
                                             <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -272,7 +321,7 @@
                         <segue destination="UZp-cs-37p" kind="relationship" relationship="viewControllers" id="sFp-2X-UWy"/>
                         <segue destination="ko3-E5-SmJ" kind="relationship" relationship="viewControllers" id="KHK-05-pZT"/>
                         <segue destination="lFG-Xa-qgh" kind="relationship" relationship="viewControllers" id="Tw3-op-s20"/>
-                        <segue destination="vFa-ph-JgE" kind="relationship" relationship="viewControllers" id="iBq-6X-uMF"/>
+                        <segue destination="6R8-O9-NOm" kind="relationship" relationship="viewControllers" id="Gz8-ey-0pT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd3-3p-K8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -94,14 +94,14 @@ class LoggedInViewController: UIViewController {
         self.view.addSubview(line)
         
         //Life
-        let lifeLabel = UILabel(frame: CGRect(x: 68.0, y: 20.0, width: 100, height: 100))
+        let lifeLabel = UILabel(frame: CGRect(x: 68.0, y: 40.0, width: 100, height: 100))
         lifeLabel.text = "\(with?.life.current ?? 0) / \(with?.life.maximum ?? 0)"
         lifeLabel.textColor = UIColor.darkGray
         lifeLabel.font = lifeLabel.font.withSize(15)
         
         self.progressBarView.addSubview(lifeLabel)
         
-        let lifeCp = CircularProgressView(frame: CGRect(x: 60.0, y: 20.0, width: 100, height: 100))
+        let lifeCp = CircularProgressView(frame: CGRect(x: 60.0, y: 40.0, width: 100, height: 100))
         lifeCp.trackColour = UIColor(red: 102/255, green: 102/255, blue: 153/255, alpha: 0.5)
         lifeCp.progressColour = UIColor(red: 76/255, green: 76/255, blue: 178/255, alpha: 1)
         self.progressBarView.addSubview(lifeCp)
@@ -109,14 +109,14 @@ class LoggedInViewController: UIViewController {
         
         //Energy
         
-        let energyLabel = UILabel(frame: CGRect(x: 85.0, y: 150.0, width: 100, height: 100))
+        let energyLabel = UILabel(frame: CGRect(x: 85.0, y: 170.0, width: 100, height: 100))
         energyLabel.text = "\(with?.energy.current ?? 0) / \(with?.energy.maximum ?? 0)"
         energyLabel.textColor = UIColor.darkGray
         energyLabel.font = energyLabel.font.withSize(15)
         
         self.progressBarView.addSubview(energyLabel)
         
-        let energyCp = CircularProgressView(frame: CGRect(x: 60.0, y: 150.0, width: 100, height: 100))
+        let energyCp = CircularProgressView(frame: CGRect(x: 60.0, y: 170.0, width: 100, height: 100))
         energyCp.trackColour = UIColor(red: 102/255, green: 153/255, blue: 102/255, alpha: 0.5)
         energyCp.progressColour = UIColor(red: 76/255, green: 178/255, blue: 76/255, alpha: 1)
         self.progressBarView.addSubview(energyCp)
@@ -124,14 +124,14 @@ class LoggedInViewController: UIViewController {
         
         //Nerve
         
-        let nerveLabel = UILabel(frame: CGRect(x: 85.0, y: 280.0, width: 100, height: 100))
+        let nerveLabel = UILabel(frame: CGRect(x: 85.0, y: 300.0, width: 100, height: 100))
         nerveLabel.text = "\(with?.nerve.current ?? 0) / \(with?.nerve.maximum ?? 0)"
         nerveLabel.textColor = UIColor.darkGray
         nerveLabel.font = nerveLabel.font.withSize(15)
         
         self.progressBarView.addSubview(nerveLabel)
         
-        let nerveCp = CircularProgressView(frame: CGRect(x: 60.0, y: 280.0, width: 100, height: 100))
+        let nerveCp = CircularProgressView(frame: CGRect(x: 60.0, y: 300.0, width: 100, height: 100))
         nerveCp.trackColour = UIColor(red: 153/255, green: 102/255, blue: 102/255, alpha: 0.5)
         nerveCp.progressColour = UIColor(red: 178/255, green: 76/255, blue: 76/255, alpha: 1)
         self.progressBarView.addSubview(nerveCp)
@@ -139,14 +139,14 @@ class LoggedInViewController: UIViewController {
         
         //Happy
         
-        let happyLabel = UILabel(frame: CGRect(x: 68.0, y: 410.0, width: 100, height: 100))
+        let happyLabel = UILabel(frame: CGRect(x: 68.0, y: 430.0, width: 100, height: 100))
         happyLabel.text = "\(with?.happy.current ?? 0) / \(with?.happy.maximum ?? 0)"
         happyLabel.textColor = UIColor.darkGray
         happyLabel.font = happyLabel.font.withSize(15)
         
         self.progressBarView.addSubview(happyLabel)
         
-        let happyCp = CircularProgressView(frame: CGRect(x: 60.0, y: 410.0, width: 100, height: 100))
+        let happyCp = CircularProgressView(frame: CGRect(x: 60.0, y: 430.0, width: 100, height: 100))
         happyCp.trackColour = UIColor(red: 178/255, green: 178/255, blue: 76/255, alpha: 0.5)
         happyCp.progressColour = UIColor(red: 191/255, green: 191/255, blue: 63/255, alpha: 1)
         self.progressBarView.addSubview(happyCp)

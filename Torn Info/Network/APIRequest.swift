@@ -130,6 +130,34 @@ struct APIRequest {
             }.resume()
         
     }
+    
+    func callRaids(completion: @escaping (Raids?) -> Void) {
+        
+        let session = URLSession.shared
+        
+            session.dataTask(with: resourceURL) { (data, response, error) in
+            
+                let jsonDecoder = JSONDecoder()
+                
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                    print(error ?? "")
+                    return
+                }
+                
+                
+                if let jsonData = data,
+                    let raids = try? jsonDecoder.decode(Raids.self, from: jsonData) {
+                    
+                    completion(raids)
+                } else {
+                    
+                    print("something went wrong during decoding!")
+                    completion(nil)
+                }
+                
+            }.resume()
+        
+    }
 
 
 }
