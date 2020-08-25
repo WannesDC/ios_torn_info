@@ -15,8 +15,17 @@ class LoggedInViewController: UIViewController {
     @IBOutlet weak var lastActionLabel: UILabel!
     @IBOutlet weak var mainPageView: UIView!
     @IBOutlet weak var headerPageView: UIView!
+    @IBOutlet weak var progressBarView: UIStackView!
     
     
+    @IBOutlet weak var mainInfoStackView: UIStackView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    @IBOutlet weak var drugCooldownLabel: UILabel!
+    @IBOutlet weak var boosterCooldownLabel: UILabel!
+    @IBOutlet weak var medicalCooldownLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         getProfile()
@@ -44,24 +53,104 @@ class LoggedInViewController: UIViewController {
     
     func loadUI(){
         //headerCard
-        headerPageView.layer.cornerRadius = 10.0
+        headerPageView.layer.cornerRadius = 2.0
         headerPageView.layer.shadowColor = UIColor.gray.cgColor
         headerPageView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         headerPageView.layer.shadowRadius = 6.0
         headerPageView.layer.shadowOpacity = 0.7
         
         //mainCard
-        mainPageView.layer.cornerRadius = 10.0
+        mainPageView.layer.cornerRadius = 2.0
         mainPageView.layer.shadowColor = UIColor.gray.cgColor
         mainPageView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         mainPageView.layer.shadowRadius = 6.0
         mainPageView.layer.shadowOpacity = 0.7
+        
+        
+        
     }
+    
 
     func updateUI(with: Profile?) {
+        
+        //header
         self.nameLabel.text = "\(with?.name ?? "N/A") [\(with?.playerID ?? 0)]"
         self.lastActionLabel.text = with?.lastAction.relative
         
+        //Main Screen
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        
+        self.statusLabel.text = "Status: \(with?.status.description ?? "N/A")"
+        self.moneyLabel.text = "Money: $ \(numberFormatter.string(for: with?.moneyOnHand) ?? "N/A" )"
+        self.pointsLabel.text = "Points: \(numberFormatter.string(for: with?.points) ?? "N/A")"
+        
+        
+        self.drugCooldownLabel.text = "\((with?.cooldowns.drug)! / (60*60) % 48 ) hours \((with?.cooldowns.drug)! / (60) % 60 ) minutes"
+        self.boosterCooldownLabel.text = "\((with?.cooldowns.booster)! / (60*60) % 48 ) hours \((with?.cooldowns.booster)! / (60) % 60 ) minutes"
+        self.medicalCooldownLabel.text = "\((with?.cooldowns.medical)! / (60*60) % 48 ) hours \((with?.cooldowns.medical)! / (60) % 60 ) minutes"
+        //divider
+        let line = LineView(frame: CGRect(x: 28, y: 280, width: 200, height: 2))
+        self.view.addSubview(line)
+        
+        //Life
+        let lifeLabel = UILabel(frame: CGRect(x: 68.0, y: 20.0, width: 100, height: 100))
+        lifeLabel.text = "\(with?.life.current ?? 0) / \(with?.life.maximum ?? 0)"
+        lifeLabel.textColor = UIColor.darkGray
+        lifeLabel.font = lifeLabel.font.withSize(15)
+        
+        self.progressBarView.addSubview(lifeLabel)
+        
+        let lifeCp = CircularProgressView(frame: CGRect(x: 60.0, y: 20.0, width: 100, height: 100))
+        lifeCp.trackColour = UIColor(red: 102/255, green: 102/255, blue: 153/255, alpha: 0.5)
+        lifeCp.progressColour = UIColor(red: 76/255, green: 76/255, blue: 178/255, alpha: 1)
+        self.progressBarView.addSubview(lifeCp)
+        lifeCp.setProgressWithAnimation(duration: 1.0, value: (Float((with?.life.current)!) / Float((with?.life.maximum)!)))
+        
+        //Energy
+        
+        let energyLabel = UILabel(frame: CGRect(x: 85.0, y: 150.0, width: 100, height: 100))
+        energyLabel.text = "\(with?.energy.current ?? 0) / \(with?.energy.maximum ?? 0)"
+        energyLabel.textColor = UIColor.darkGray
+        energyLabel.font = energyLabel.font.withSize(15)
+        
+        self.progressBarView.addSubview(energyLabel)
+        
+        let energyCp = CircularProgressView(frame: CGRect(x: 60.0, y: 150.0, width: 100, height: 100))
+        energyCp.trackColour = UIColor(red: 102/255, green: 153/255, blue: 102/255, alpha: 0.5)
+        energyCp.progressColour = UIColor(red: 76/255, green: 178/255, blue: 76/255, alpha: 1)
+        self.progressBarView.addSubview(energyCp)
+        energyCp.setProgressWithAnimation(duration: 1.0, value: (Float((with?.energy.current)!) / Float((with?.energy.maximum)!)))
+        
+        //Nerve
+        
+        let nerveLabel = UILabel(frame: CGRect(x: 85.0, y: 280.0, width: 100, height: 100))
+        nerveLabel.text = "\(with?.nerve.current ?? 0) / \(with?.nerve.maximum ?? 0)"
+        nerveLabel.textColor = UIColor.darkGray
+        nerveLabel.font = nerveLabel.font.withSize(15)
+        
+        self.progressBarView.addSubview(nerveLabel)
+        
+        let nerveCp = CircularProgressView(frame: CGRect(x: 60.0, y: 280.0, width: 100, height: 100))
+        nerveCp.trackColour = UIColor(red: 153/255, green: 102/255, blue: 102/255, alpha: 0.5)
+        nerveCp.progressColour = UIColor(red: 178/255, green: 76/255, blue: 76/255, alpha: 1)
+        self.progressBarView.addSubview(nerveCp)
+        nerveCp.setProgressWithAnimation(duration: 1.0, value: (Float((with?.nerve.current)!) / Float((with?.nerve.maximum)!)))
+        
+        //Happy
+        
+        let happyLabel = UILabel(frame: CGRect(x: 68.0, y: 410.0, width: 100, height: 100))
+        happyLabel.text = "\(with?.happy.current ?? 0) / \(with?.happy.maximum ?? 0)"
+        happyLabel.textColor = UIColor.darkGray
+        happyLabel.font = happyLabel.font.withSize(15)
+        
+        self.progressBarView.addSubview(happyLabel)
+        
+        let happyCp = CircularProgressView(frame: CGRect(x: 60.0, y: 410.0, width: 100, height: 100))
+        happyCp.trackColour = UIColor(red: 178/255, green: 178/255, blue: 76/255, alpha: 0.5)
+        happyCp.progressColour = UIColor(red: 191/255, green: 191/255, blue: 63/255, alpha: 1)
+        self.progressBarView.addSubview(happyCp)
+        happyCp.setProgressWithAnimation(duration: 1.0, value: (Float((with?.happy.current)!) / Float((with?.happy.maximum)!)))
     }
     /*
     // MARK: - Navigation

@@ -14,6 +14,8 @@ class CrimesViewController: UIViewController {
         super.viewDidLoad()
         getCrimes()
         // Do any additional setup after loading the view.
+        //circularProgressBar
+
     }
     
     func getCrimes() -> Void {
