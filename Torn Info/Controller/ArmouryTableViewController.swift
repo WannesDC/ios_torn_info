@@ -5,13 +5,18 @@
 //  Created by Wannes De Craene on 24/08/2020.
 //  Copyright © 2020 Wannes De Craene. All rights reserved.
 //
+// Source for search:
+//      https://vasundharavision.com/blog/ios/how-to-use-search-bar-in-table-view
 
 import UIKit
 
-class ArmouryTableViewController: UITableViewController {
+class ArmouryTableViewController: UITableViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var searchArmourynews: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchArmourynews.delegate = self
         getArmouryNews()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,6 +27,7 @@ class ArmouryTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     var array : [News] = []
+    var searchArray : [News]! = []
     
     func getArmouryNews() -> Void {
         let endpoint = "faction/?selections=armorynewsfull&key="+globalApiKey
@@ -39,6 +45,7 @@ class ArmouryTableViewController: UITableViewController {
             
             self.array = self.array.sorted(by: { $0.timestamp > $1.timestamp })
             
+            self.searchArray = self.array
             DispatchQueue.main.async {
                 self.viewWillAppear(true)
             }
@@ -55,7 +62,7 @@ class ArmouryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(array.count)
         if section == 0 {
-            return self.array.count
+            return self.searchArray.count
         } else {
             return 0
         }
@@ -66,7 +73,7 @@ class ArmouryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath)
 
         
-        let news = self.array[indexPath.row]
+        let news = self.searchArray[indexPath.row]
         cell.textLabel?.text = news.convertTimeStamp()
         cell.detailTextLabel?.text = news.stripHtmlFromNews()
 
@@ -78,6 +85,32 @@ class ArmouryTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchArray = array
+        searchBar.endEditing(true)
+        tableView.reloadData()
+    }
+
+    
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        searchArray = searchText.isEmpty ? array : array.filter {
+            (item: News) -> Bool in
+            // returns true if searchtext matches item
+            if item.news.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil {
+                print(item.news)
+                return true
+            }else {
+                return false
+            }
+
+        }
+        tableView.reloadData()
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
