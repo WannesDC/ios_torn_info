@@ -155,12 +155,8 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6I3-AG-Vap">
-                                                                <rect key="frame" x="208" y="0.0" width="190" height="557"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-Yj-JvV">
-                                                                <rect key="frame" x="20" y="260" width="50" height="190"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-Yj-JvV">
+                                                                <rect key="frame" x="20" y="310" width="50" height="190"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMX-tP-YfM">
                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -182,13 +178,102 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
+                                                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6I3-AG-Vap">
+                                                                <rect key="frame" x="278" y="40" width="100" height="460"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZ8-b7-b2Y" customClass="CircularProgressView" customModule="Torn_Info" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex9-Lt-Onw">
+                                                                                <rect key="frame" x="50" y="50" width="0.0" height="0.0"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="ex9-Lt-Onw" firstAttribute="centerY" secondItem="hZ8-b7-b2Y" secondAttribute="centerY" id="8vE-Jp-o7b"/>
+                                                                            <constraint firstAttribute="height" constant="100" id="BTL-EG-240"/>
+                                                                            <constraint firstAttribute="width" constant="100" id="nOM-Yf-ZiU"/>
+                                                                            <constraint firstItem="ex9-Lt-Onw" firstAttribute="centerX" secondItem="hZ8-b7-b2Y" secondAttribute="centerX" id="uQp-yK-Y3a"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-w6-SY2" customClass="CircularProgressView" customModule="Torn_Info" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="120" width="100" height="100"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvR-VQ-5gh">
+                                                                                <rect key="frame" x="50" y="50" width="0.0" height="0.0"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="PvR-VQ-5gh" firstAttribute="centerX" secondItem="hPI-w6-SY2" secondAttribute="centerX" id="I6O-YU-4b5"/>
+                                                                            <constraint firstItem="PvR-VQ-5gh" firstAttribute="centerY" secondItem="hPI-w6-SY2" secondAttribute="centerY" id="mQx-6T-4Ph"/>
+                                                                            <constraint firstAttribute="width" constant="100" id="pJA-Xt-SgV"/>
+                                                                            <constraint firstAttribute="height" constant="100" id="qC4-ri-rRF"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lj0-5L-gXI" customClass="CircularProgressView" customModule="Torn_Info" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="240" width="100" height="100"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtk-Pu-Yjn">
+                                                                                <rect key="frame" x="50" y="50" width="0.0" height="0.0"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="100" id="2aV-3l-G5o"/>
+                                                                            <constraint firstItem="dtk-Pu-Yjn" firstAttribute="centerX" secondItem="Lj0-5L-gXI" secondAttribute="centerX" id="DIc-OH-guh"/>
+                                                                            <constraint firstAttribute="width" constant="100" id="Rlp-oq-Pv8"/>
+                                                                            <constraint firstItem="dtk-Pu-Yjn" firstAttribute="centerY" secondItem="Lj0-5L-gXI" secondAttribute="centerY" id="Ssa-mD-e8u"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JL2-Zb-bCz" customClass="CircularProgressView" customModule="Torn_Info" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="360" width="100" height="100"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvE-S0-jSl">
+                                                                                <rect key="frame" x="50" y="50" width="0.0" height="0.0"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="HvE-S0-jSl" firstAttribute="centerY" secondItem="JL2-Zb-bCz" secondAttribute="centerY" id="7OW-AD-aY9"/>
+                                                                            <constraint firstItem="HvE-S0-jSl" firstAttribute="centerX" secondItem="JL2-Zb-bCz" secondAttribute="centerX" id="BS9-FS-vtf"/>
+                                                                            <constraint firstAttribute="height" constant="100" id="Kgi-j4-Q28"/>
+                                                                            <constraint firstAttribute="width" constant="100" id="pF0-Ka-sJL"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-TT-Lbx" customClass="LineView" customModule="Torn_Info" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="230" width="200" height="1"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="1qN-hO-fJW"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="A32-Vg-na1"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="6I3-AG-Vap" secondAttribute="trailing" constant="20" id="1AX-Ab-zOg"/>
+                                                            <constraint firstItem="5rw-TT-Lbx" firstAttribute="top" secondItem="39h-rl-pFD" secondAttribute="bottom" constant="20" id="2Ds-3c-VbL"/>
                                                             <constraint firstItem="aAb-Yj-JvV" firstAttribute="leading" secondItem="csf-Uh-Aa9" secondAttribute="leading" constant="20" id="59E-5B-00c"/>
+                                                            <constraint firstItem="6I3-AG-Vap" firstAttribute="top" secondItem="csf-Uh-Aa9" secondAttribute="top" constant="40" id="Bf3-Ij-6q9"/>
+                                                            <constraint firstItem="5rw-TT-Lbx" firstAttribute="leading" secondItem="csf-Uh-Aa9" secondAttribute="leading" constant="20" id="JEv-1u-ryl"/>
                                                             <constraint firstItem="39h-rl-pFD" firstAttribute="top" secondItem="csf-Uh-Aa9" secondAttribute="top" constant="20" id="iN9-n1-Gv8"/>
+                                                            <constraint firstItem="aAb-Yj-JvV" firstAttribute="top" secondItem="5rw-TT-Lbx" secondAttribute="bottom" constant="20" id="ix5-91-def"/>
                                                             <constraint firstItem="39h-rl-pFD" firstAttribute="leading" secondItem="csf-Uh-Aa9" secondAttribute="leading" constant="20" id="kih-io-SW8"/>
-                                                            <constraint firstItem="aAb-Yj-JvV" firstAttribute="top" secondItem="39h-rl-pFD" secondAttribute="bottom" constant="50" id="qKq-wZ-eT7"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -229,14 +314,22 @@
                     <connections>
                         <outlet property="boosterCooldownLabel" destination="Y4E-zG-b8p" id="lQI-0Y-9S3"/>
                         <outlet property="drugCooldownLabel" destination="YMX-tP-YfM" id="map-oj-epO"/>
+                        <outlet property="energyCP" destination="hPI-w6-SY2" id="D7g-7J-un9"/>
+                        <outlet property="energyLabel" destination="PvR-VQ-5gh" id="k7q-nG-QQ1"/>
+                        <outlet property="happyCP" destination="JL2-Zb-bCz" id="d65-Hl-pkh"/>
+                        <outlet property="happyLabel" destination="HvE-S0-jSl" id="vy3-iG-7EM"/>
                         <outlet property="headerPageView" destination="1dS-9h-D7p" id="l3m-uJ-m3D"/>
                         <outlet property="lastActionLabel" destination="K2f-Iu-qdI" id="wwi-jf-geC"/>
+                        <outlet property="lifeCP" destination="hZ8-b7-b2Y" id="MvA-4q-SKM"/>
+                        <outlet property="lifeLabel" destination="ex9-Lt-Onw" id="eMt-P1-9cg"/>
                         <outlet property="mainInfoStackView" destination="39h-rl-pFD" id="V0R-JK-4TK"/>
                         <outlet property="mainPageView" destination="csf-Uh-Aa9" id="e3m-TE-k66"/>
                         <outlet property="mainStackView" destination="dML-GZ-URj" id="B4U-OO-a5a"/>
                         <outlet property="medicalCooldownLabel" destination="VwV-qf-aGb" id="dGb-6c-kM8"/>
                         <outlet property="moneyLabel" destination="c9h-7f-rfD" id="8AZ-Kr-KyG"/>
                         <outlet property="nameLabel" destination="PHt-eB-HW5" id="Vq0-EL-yXj"/>
+                        <outlet property="nerveCP" destination="Lj0-5L-gXI" id="fZw-FD-5fZ"/>
+                        <outlet property="nerveLabel" destination="dtk-Pu-Yjn" id="eqB-pC-qyU"/>
                         <outlet property="pointsLabel" destination="dp3-js-zjv" id="TQ2-Yf-RtW"/>
                         <outlet property="progressBarView" destination="6I3-AG-Vap" id="MgX-Sx-0uA"/>
                         <outlet property="statusLabel" destination="iPx-T7-1VC" id="bLL-Vx-TVy"/>
@@ -245,22 +338,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNz-GP-dbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="971.01449275362324" y="388.39285714285711"/>
-        </scene>
-        <!--Crimes-->
-        <scene sceneID="Ra9-Lq-Hi8">
-            <objects>
-                <viewController id="lFG-Xa-qgh" customClass="CrimesViewController" customModule="Torn_Info" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OIu-JX-VW3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="LIK-Hb-zv7"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Crimes" image="briefcase" catalog="system" landscapeImage="briefcase" id="XNF-mt-mF4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i9O-zy-KSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-935" y="840"/>
         </scene>
         <!--Armoury-->
         <scene sceneID="B3h-Zm-4cO">
@@ -328,7 +405,6 @@
                     <connections>
                         <segue destination="UZp-cs-37p" kind="relationship" relationship="viewControllers" id="sFp-2X-UWy"/>
                         <segue destination="ko3-E5-SmJ" kind="relationship" relationship="viewControllers" id="KHK-05-pZT"/>
-                        <segue destination="lFG-Xa-qgh" kind="relationship" relationship="viewControllers" id="Tw3-op-s20"/>
                         <segue destination="6R8-O9-NOm" kind="relationship" relationship="viewControllers" id="Gz8-ey-0pT"/>
                     </connections>
                 </tabBarController>
@@ -339,7 +415,6 @@
     </scenes>
     <resources>
         <image name="bolt" catalog="system" width="101" height="128"/>
-        <image name="briefcase" catalog="system" width="128" height="102"/>
         <image name="hammer" catalog="system" width="128" height="115"/>
         <image name="house" catalog="system" width="128" height="110"/>
     </resources>
