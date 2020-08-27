@@ -1,5 +1,7 @@
 ## Torn Info
 
+Dit is het project van Wannes De Craene voor IOS, academiejaar 2019-2020.
+
 Deze applicatie is gericht op het verkrijgen van informatie van iemand's account in https://www.torn.com . De link naar de gebruikte api is: https://api.torn.com
 
 Kort uitgelegd is dit een text-based browser game waar je een eigen character maakt, dat je dan gebruikt om te overleven in een criminele "onderwereld" en zo je eigen naam te creeren. 
