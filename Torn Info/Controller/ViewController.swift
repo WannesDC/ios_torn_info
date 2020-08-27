@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var apiKey: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    var temp_api_key: String = "utllH7do9sv9ry8d"
+    //add key here when testing code
+    //var temp_api_key: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,8 @@ class ViewController: UIViewController {
             return
         }
         
-        //globalApiKey = apiKey.text ?? ""
-        globalApiKey = temp_api_key
+        globalApiKey = apiKey.text ?? ""
+        //globalApiKey = temp_api_key
         
         login(apiKey: apiKey.text ?? "")
     }
