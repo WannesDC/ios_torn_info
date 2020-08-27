@@ -21,3 +21,36 @@ Concreet heeft deze applicatie:
 
 Hier logt u in met een Api key, in dit geval utllH7do9sv9ry8d , let wel op, deze api key heeft maar een beperkt aantal "calls per minuut", dus indien deze erg intensief gebruikt wordt kan deze disabled worden door Torn zelf.
 
+### Homescherm
+
+Eenmaal de api key is ingegeven en u op login heeft geklikt komt u op een scherm terecht waar een basic overzicht van de gebruiker z'n account wordt weergegeven.
+
+Op dit scherm vindt u:
+
+####Header
+
+- Naam en user ID
+- Wanneer de gebruiker laatst online was
+
+####Mainscherm
+
+- De status van de gebruiker (okay, flying, in hospital, in jail...)
+- Hoeveel geld de gebruiker opzak heeft
+- Hoeveel punten de gebruiker opzak heeft
+- Drie verschillende cooldowns die vertellen wanneer de gebruiker opnieuw bepaalde items kan gebruiken
+
+- Vier verschillende progressbars die vertellen hoeveel: 
+  * Leven de gebruiker heeft
+  * Energie de gebruiker heeft
+  * Nerve de gebruiker heeft
+  * Happiness de gebruiker heeft
+  
+  
+  
+### Armouryscherm
+
+Dit scherm bevat een lijst met de laatste 1,000 entries in de faction's armoury. Een faction is een groep spelers die samenwerkt, een armoury is in principe het magazijn van deze faction. Voor Leaders is het gemakkelijk een lijst te hebben met wat hiermee gebeurt en een zoekfunctie indien iemand iets gebruikt dat niet mocht gebruikt worden
+
+### Raid scherm
+
+Dit scherm bevat een lijst met factions die op het moment van de pagevisit in oorlog zitten met elkaar.
