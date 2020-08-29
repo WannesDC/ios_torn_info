@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="npE-bb-Yhf">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Torn_Info" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="torn" translatesAutoresizingMaskIntoConstraints="NO" id="Sxi-AK-l4r">
-                                <rect key="frame" x="7" y="98" width="400" height="300"/>
+                                <rect key="frame" x="7" y="54" width="400" height="300"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3xV-yh-gDP">
-                                <rect key="frame" x="107" y="408" width="200" height="84"/>
+                                <rect key="frame" x="107" y="364" width="200" height="84"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KeU-Gm-5sA">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -89,27 +89,68 @@
             <objects>
                 <viewController id="8hP-z3-7Rk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S6H-yx-j1H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RNJ-q4-Ewm">
-                                <rect key="frame" x="30" y="118" width="354" height="453"/>
+                                <rect key="frame" x="30" y="74" width="354" height="453"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="torn" translatesAutoresizingMaskIntoConstraints="NO" id="cn0-xs-en7">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="QAR-Hq-WdU"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="QAR-Hq-WdU"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="QAR-Hq-WdU"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to this Torn application!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Aw-4u-HCu">
                                         <rect key="frame" x="0.0" y="320" width="354" height="20.333333333333314"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" id="ym1-Uy-fiP"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ym1-Uy-fiP"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="ym1-Uy-fiP"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JW-YL-6UE" customClass="LineView" customModule="Torn_Info" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="360.33333333333331" width="354" height="1"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="AMA-k0-UbD"/>
+                                            <constraint firstAttribute="height" constant="1" id="AMA-k0-UbD">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" id="aKP-HO-IDz">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="1"/>
+                                            </constraint>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="aKP-HO-IDz"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="aKP-HO-IDz"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhG-Yz-7zC">
                                         <rect key="frame" x="0.0" y="381.33333333333331" width="354" height="71.666666666666686"/>
@@ -119,6 +160,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="i0w-sJ-A2M"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="i0w-sJ-A2M"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal">
+                                    <mask key="constraints">
+                                        <include reference="i0w-sJ-A2M"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -141,7 +195,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="npE-bb-Yhf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5q9-6x-dOp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
